@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Bruno Favoretto — Médico — CRM-GO 20000</title>
-    <meta name="description" content="Dr. Bruno Favoretto, médico em Goiânia. Atendimento especializado para crianças e adolescentes.">
+    <title>Dr. Bruno Favoretto — Pediatria e Nutrologia</title>
+    <meta name="description" content="Dr. Bruno Favoretto, médico em Goiânia. Atendimento especializado e humanizado para crianças e adolescentes.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -45,7 +45,12 @@
             font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
             color: var(--dark);
-            line-height: 1.2;
+            line-height: 1.3;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         a {
@@ -65,11 +70,12 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(250, 248, 243, 0.92);
+            background: rgba(250, 248, 243, 0.95);
             backdrop-filter: blur(12px);
             z-index: 1000;
-            padding: 12px 0;
+            padding: 18px 0;
             border-bottom: 1px solid var(--line);
+            transition: 0.3s;
         }
 
         .nav-content {
@@ -80,7 +86,7 @@
 
         .logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 700;
             letter-spacing: 1px;
         }
@@ -92,14 +98,30 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 32px;
+            gap: 40px;
         }
 
         nav a {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             font-weight: 500;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--gold);
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         nav a:hover {
@@ -109,7 +131,7 @@
         /* HERO - Layout elegante: conteúdo no topo, foto do Dr. Bruno visível embaixo */
         .hero {
             height: 100vh;
-            min-height: 700px;
+            min-height: 750px;
             position: relative;
             background: url('assets/img/avatar-doctoralia.jpg') center bottom / cover no-repeat;
             overflow: hidden;
@@ -122,11 +144,10 @@
             /* Gradiente suave: escuro no topo para contraste do texto, desvanecendo para transparente onde está o rosto */
             background: linear-gradient(
                 to bottom,
-                rgba(0,0,0,0.65) 0%,
-                rgba(0,0,0,0.50) 25%,
-                rgba(0,0,0,0.20) 45%,
-                rgba(0,0,0,0.03) 65%,
-                rgba(0,0,0,0.0) 85%
+                rgba(0,0,0,0.7) 0%,
+                rgba(0,0,0,0.5) 25%,
+                rgba(0,0,0,0.15) 45%,
+                rgba(0,0,0,0.0) 70%
             );
             z-index: 1;
         }
@@ -135,120 +156,135 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            padding-top: 12vh;
-            padding-bottom: 35vh;
+            padding-top: 16vh;
+            padding-bottom: 30vh;
         }
 
         .hero-content .subtitle-top {
             display: block;
             text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 0.85rem;
+            letter-spacing: 6px;
+            font-size: 0.95rem;
             color: var(--gold);
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             font-weight: 500;
         }
 
         .hero h1 {
-            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
             color: var(--white);
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             font-style: italic;
-            max-width: 650px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            font-size: 1.05rem;
-            margin-bottom: 32px;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
             font-weight: 300;
             letter-spacing: 0.5px;
-            color: rgba(255,255,255,0.85);
-            max-width: 480px;
-            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
         }
 
         .btn-hero {
             display: inline-block;
-            padding: 14px 40px;
+            padding: 18px 48px;
             background: var(--gold);
             color: var(--dark);
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2.5px;
-            border-radius: 3px;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            border-radius: 4px;
             transition: 0.4s;
             border: none;
-            margin-top: 4px;
+            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
         }
 
         .btn-hero:hover {
             background: var(--white);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
         }
 
         /* SEÇÕES */
         section {
-            padding: 100px 0;
+            padding: 120px 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
 
         .section-title h2 {
-            font-size: 2.8rem;
-            margin-bottom: 8px;
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+            font-style: italic;
         }
 
         .section-title .subtitle {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: var(--gold);
             font-weight: 700;
+            margin-bottom: 12px;
+            display: block;
         }
 
         /* SOBRE */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 80px;
             align-items: center;
         }
 
         .about-image img {
             width: 100%;
-            border-radius: 2px;
+            border-radius: 4px;
             box-shadow: var(--shadow-lg);
         }
 
         .about-text h3 {
-            font-size: 2rem;
-            margin-bottom: 24px;
+            font-size: 2.5rem;
+            margin-bottom: 32px;
             font-style: italic;
+            color: var(--gold-dark);
         }
 
         .about-text p {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             color: var(--dark-light);
+        }
+
+        .about-text .credentials {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--line);
         }
 
         /* SERVIÇOS */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
         }
 
         .service-card {
             background: var(--white);
-            padding: 40px;
-            border-radius: 2px;
+            padding: 50px;
+            border-radius: 4px;
             box-shadow: var(--shadow-sm);
-            border-top: 3px solid var(--gold);
+            border-top: 4px solid var(--gold);
             transition: 0.3s;
         }
 
@@ -258,26 +294,27 @@
         }
 
         .service-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 16px;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         .service-card p {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             color: var(--dark-light);
         }
 
         /* ESTRUTURA */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
         }
 
         .gallery-item {
-            aspect-ratio: 1;
+            aspect-ratio: 4/3;
             overflow: hidden;
-            border-radius: 2px;
+            border-radius: 4px;
+            box-shadow: var(--shadow-sm);
         }
 
         .gallery-item img {
@@ -288,104 +325,171 @@
         }
 
         .gallery-item:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         /* CONTATO */
         .contact-content {
             text-align: center;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
+        .contact-content > p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            color: var(--dark-light);
+        }
+
         .contact-info {
-            margin-top: 40px;
+            margin-top: 60px;
             display: grid;
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 4px;
+            box-shadow: var(--shadow-md);
         }
 
         .info-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 4px;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
             color: var(--gold);
+        }
+
+        .info-item p {
+            font-size: 1.1rem;
+            color: var(--dark-light);
         }
 
         /* MAPA */
         .map-container {
-            margin-top: 60px;
+            margin-top: 80px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: var(--shadow-md);
-            height: 400px;
+            box-shadow: var(--shadow-lg);
+            height: 450px;
+        }
+
+        .contact-btn-container {
+            margin-top: 60px;
         }
 
         /* FOOTER */
         footer {
-            background: var(--cream-dark);
-            padding: 60px 0 20px;
+            background: var(--dark);
+            padding: 80px 0 30px;
             text-align: center;
-            border-top: 1px solid var(--line);
+            color: var(--white);
         }
 
         .footer-logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 24px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .footer-logo span {
+            color: var(--gold);
+        }
+
+        .footer-text {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+            margin-bottom: 40px;
         }
 
         .footer-bottom {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--line);
-            font-size: 0.8rem;
-            color: var(--dark-light);
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
         }
 
         /* RESPONSIVO */
         @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; }
+            p {
+                font-size: 1rem;
+            }
+
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
             nav ul { display: none; }
 
             .hero {
-                min-height: 550px;
+                min-height: 600px;
             }
 
             .hero-content {
-                padding-top: 10vh;
+                padding-top: 12vh;
+                padding-bottom: 35vh;
             }
 
             .hero-content .subtitle-top {
-                font-size: 0.7rem;
+                font-size: 0.75rem;
                 letter-spacing: 3px;
-                margin-bottom: 10px;
+                margin-bottom: 12px;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
-                margin-bottom: 8px;
-                max-width: 320px;
+                font-size: 2.2rem;
+                margin-bottom: 12px;
+                max-width: 100%;
             }
 
             .hero p {
-                font-size: 0.85rem;
-                margin-bottom: 20px;
-                max-width: 280px;
+                font-size: 1rem;
+                margin-bottom: 24px;
+                max-width: 100%;
             }
 
             .btn-hero {
-                padding: 11px 28px;
-                font-size: 0.72rem;
+                padding: 14px 32px;
+                font-size: 0.8rem;
                 letter-spacing: 2px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                margin-bottom: 50px;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .about-text h3 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .service-card {
+                padding: 32px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 24px;
             }
         }
 
         @media (max-width: 380px) {
             .hero h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             .hero p {
-                font-size: 0.78rem;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -410,7 +514,7 @@
         <div class="hero-content">
             <span class="subtitle-top">Cuidado e Dedicação</span>
             <h1>Saúde Infantil com Excelência</h1>
-            <p>Atendimento médico humanizado para crianças e adolescentes em Goiânia.</p>
+            <p>Atendimento médico humanizado, focado no desenvolvimento saudável e no bem-estar de crianças e adolescentes em Goiânia.</p>
             <a href="https://wa.me/5562982429688" class="btn-hero">Agendar Consulta</a>
         </div>
     </section>
@@ -425,8 +529,8 @@
                     <span class="subtitle">Conheça o Profissional</span>
                     <h3>Dr. Bruno Favoretto</h3>
                     <p>Dr. Bruno Favoretto é médico em Goiânia (CRM-GO 20000), dedicado ao acompanhamento clínico de crianças e adolescentes. Com formação sólida e pós-graduação em Pediatria e Nutrologia, sua prática é pautada na escuta cuidadosa e no suporte integral às famílias.</p>
-                    <p>No consultório, busca oferecer orientações claras sobre crescimento, alimentação e desenvolvimento, sempre com foco no bem-estar e na saúde a longo prazo de seus pacientes.</p>
-                    <div style="margin-top: 20px;">
+                    <p>No consultório, busca oferecer orientações claras sobre crescimento, alimentação e desenvolvimento, sempre com foco no bem-estar e na saúde a longo prazo de seus pacientes. Acredita que a medicina vai além do diagnóstico, envolvendo acolhimento, empatia e construção de uma relação de confiança com os pequenos.</p>
+                    <div class="credentials">
                         <p><strong>CRM-GO 20000</strong><br>
                         <small>Pós-graduação em Pediatria e Nutrologia — NÃO ESPECIALISTA</small></p>
                     </div>
@@ -444,19 +548,19 @@
             <div class="services-grid">
                 <div class="service-card">
                     <h3>Desenvolvimento Infantil</h3>
-                    <p>Acompanhamento detalhado de todas as fases do crescimento e desenvolvimento neuropsicomotor da criança.</p>
+                    <p>Acompanhamento detalhado de todas as fases do crescimento e desenvolvimento neuropsicomotor da criança, garantindo que cada marco seja alcançado com saúde e tranquilidade.</p>
                 </div>
                 <div class="service-card">
                     <h3>Nutrologia Pediátrica</h3>
-                    <p>Orientação alimentar personalizada para garantir todos os nutrientes necessários para um crescimento saudável.</p>
+                    <p>Orientação alimentar personalizada para garantir todos os nutrientes necessários para um crescimento saudável, abordando desde a introdução alimentar até a fase escolar.</p>
                 </div>
                 <div class="service-card">
                     <h3>Teleconsulta</h3>
-                    <p>Atendimento on-line prático e seguro para orientações e acompanhamentos que não exigem exame físico presencial.</p>
+                    <p>Atendimento on-line prático e seguro para orientações, acompanhamento de exames e acompanhamentos que não exigem exame físico presencial, com a comodidade de sua casa.</p>
                 </div>
                 <div class="service-card">
                     <h3>Atendimento Domiciliar</h3>
-                    <p>Conforto e segurança para sua família com atendimento médico no ambiente do seu lar.</p>
+                    <p>Conforto e segurança para sua família com atendimento médico no ambiente do seu lar, ideal para situações em que o deslocamento ao consultório não é possível.</p>
                 </div>
             </div>
         </div>
@@ -484,7 +588,7 @@
                 <h2>Agende sua visita</h2>
             </div>
             <div class="contact-content">
-                <p>Estamos prontos para atender você e sua família com todo o cuidado que vocês merecem.</p>
+                <p>Estamos prontos para atender você e sua família com todo o cuidado que vocês merecem. Entre em contato para agendar uma consulta ou tirar suas dúvidas.</p>
                 <div class="contact-info">
                     <div class="info-item">
                         <h4>Endereço</h4>
@@ -507,7 +611,7 @@
                     </iframe>
                 </div>
 
-                <div style="margin-top: 40px;">
+                <div class="contact-btn-container">
                     <a href="https://wa.me/5562982429688" class="btn-hero">Enviar Mensagem</a>
                 </div>
             </div>
@@ -517,10 +621,10 @@
     <footer>
         <div class="container">
             <div class="footer-logo">DR. BRUNO <span>FAVORETTO</span></div>
-            <p>CRM-GO 20000 | Médico</p>
+            <p class="footer-text">CRM-GO 20000 | Médico</p>
             <div class="footer-bottom">
                 <p>&copy; 2026 Dr. Bruno Favoretto. Todos os direitos reservados.</p>
-                <p style="margin-top: 10px; font-size: 0.7rem; opacity: 0.6;">As informações contidas neste site têm caráter informativo e não substituem a consulta médica.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">As informações contidas neste site têm caráter informativo e não substituem a consulta médica.</p>
             </div>
         </div>
     </footer>
