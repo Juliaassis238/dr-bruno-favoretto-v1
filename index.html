@@ -287,6 +287,15 @@
             color: var(--gold);
         }
 
+        /* MAPA */
+        .map-container {
+            margin-top: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 400px;
+        }
+
         /* FOOTER */
         footer {
             background: var(--cream-dark);
@@ -335,7 +344,7 @@
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <span class="subtitle" style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; margin-bottom: 10px; display: block;">Cuidado e Dedicação</span>
+            <span class="subtitle" style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; margin-bottom: 10px; display: block; color: #fff;">Cuidado e Dedicação</span>
             <h1>Saúde Infantil com Excelência</h1>
             <p>Atendimento médico humanizado para crianças e adolescentes em Goiânia.</p>
             <a href="https://wa.me/5562982429688" class="btn">Agendar Consulta</a>
@@ -346,7 +355,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="assets/img/galeria-01.jpg" alt="Dr. Bruno Favoretto">
+                    <img src="assets/img/galeria-01.jpg" alt="Dr. Bruno Favoretto" loading="lazy">
                 </div>
                 <div class="about-text">
                     <span class="subtitle">Conheça o Profissional</span>
@@ -396,10 +405,10 @@
                 <h2>Nosso Consultório</h2>
             </div>
             <div class="gallery">
-                <div class="gallery-item"><img src="assets/img/galeria-04.jpg" alt="Consultório"></div>
-                <div class="gallery-item"><img src="assets/img/galeria-05.jpg" alt="Sala de Exame"></div>
-                <div class="gallery-item"><img src="assets/img/galeria-06.jpg" alt="Sala de Espera"></div>
-                <div class="gallery-item"><img src="assets/img/galeria-03.jpg" alt="Fachada"></div>
+                <div class="gallery-item"><img src="assets/img/galeria-04.jpg" alt="Consultório" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/img/galeria-05.jpg" alt="Sala de Exame" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/img/galeria-06.jpg" alt="Sala de Espera" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/img/galeria-03.jpg" alt="Fachada" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -426,6 +435,14 @@
                         <p>bruno.favoretto@hotmail.com</p>
                     </div>
                 </div>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3821.571477464353!2d-49.278333!3d-16.702778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef16800000001%3A0x0!2zMTbCsDQyJzEwLjAiUyA0OcKwMTYnNDIuMCJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
                 <div style="margin-top: 40px;">
                     <a href="https://wa.me/5562982429688" class="btn">Enviar Mensagem</a>
                 </div>
