@@ -60,7 +60,7 @@
             padding: 0 24px;
         }
 
-        /* HEADER - DIMINUÍDO */
+        /* HEADER */
         header {
             position: fixed;
             top: 0;
@@ -106,67 +106,85 @@
             color: var(--gold);
         }
 
-        /* HERO - FOTO NO FUNDO CHIQUE */
+        /* HERO - Foto do Dr. Bruno aparece na parte inferior, conteúdo no topo */
         .hero {
             height: 100vh;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
+            min-height: 600px;
             position: relative;
-            background: url('assets/img/avatar-doctoralia.jpg') center 40% / cover no-repeat;
-            color: var(--white);
-            text-align: center;
+            /* Foto ancorada na parte inferior para mostrar o rosto */
+            background: url('assets/img/avatar-doctoralia.jpg') center bottom / cover no-repeat;
+            overflow: hidden;
         }
 
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.1));
+            /* Gradiente: escuro em cima (onde está o texto), transparente embaixo (onde está o rosto) */
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.55) 0%,
+                rgba(0,0,0,0.4) 30%,
+                rgba(0,0,0,0.15) 50%,
+                rgba(0,0,0,0.0) 70%
+            );
+            z-index: 1;
         }
 
         .hero-content {
             position: relative;
-            z-index: 1;
-            max-width: 700px;
-            padding: 0 24px;
-            padding-top: 180px;
+            z-index: 2;
+            text-align: center;
+            padding-top: 10vh;
+            padding-bottom: 45vh;
+        }
+
+        .hero-content .subtitle-top {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 8px;
+            font-weight: 400;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             color: var(--white);
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             font-style: italic;
         }
 
         .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 28px;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
             font-weight: 300;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            color: rgba(255,255,255,0.85);
         }
 
-        .btn {
+        .btn-hero {
             display: inline-block;
-            padding: 14px 36px;
+            padding: 12px 32px;
             background: var(--gold);
             color: var(--dark);
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 2px;
             border-radius: 2px;
             transition: 0.4s;
+            border: none;
         }
 
-        .btn:hover {
+        .btn-hero:hover {
             background: var(--white);
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
 
-        /* SEÇÕES - FUNDO CLARO E TEXTO ESCURO */
+        /* SEÇÕES */
         section {
             padding: 100px 0;
         }
@@ -320,25 +338,33 @@
             color: var(--dark-light);
         }
 
+        /* RESPONSIVO */
         @media (max-width: 768px) {
             .about-grid { grid-template-columns: 1fr; }
             nav ul { display: none; }
             .hero {
-                background-position: center 30%;
+                min-height: 500px;
             }
             .hero-content {
-                padding-top: 140px;
+                padding-top: 8vh;
+                padding-bottom: 65vh;
+            }
+            .hero-content .subtitle-top {
+                font-size: 0.6rem;
+                margin-bottom: 4px;
+                letter-spacing: 2px;
             }
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 1.3rem;
+                margin-bottom: 4px;
             }
             .hero p {
-                font-size: 0.95rem;
-                margin-bottom: 24px;
-            }
-            .btn {
-                padding: 12px 28px;
                 font-size: 0.75rem;
+                margin-bottom: 8px;
+            }
+            .btn-hero {
+                padding: 8px 20px;
+                font-size: 0.65rem;
             }
         }
     </style>
@@ -361,10 +387,10 @@
 
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <span class="subtitle" style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; margin-bottom: 10px; display: block; color: #fff;">Cuidado e Dedicação</span>
+            <span class="subtitle-top">Cuidado e Dedicação</span>
             <h1>Saúde Infantil com Excelência</h1>
             <p>Atendimento médico humanizado para crianças e adolescentes em Goiânia.</p>
-            <a href="https://wa.me/5562982429688" class="btn">Agendar Consulta</a>
+            <a href="https://wa.me/5562982429688" class="btn-hero">Agendar Consulta</a>
         </div>
     </section>
 
@@ -461,7 +487,7 @@
                 </div>
 
                 <div style="margin-top: 40px;">
-                    <a href="https://wa.me/5562982429688" class="btn">Enviar Mensagem</a>
+                    <a href="https://wa.me/5562982429688" class="btn-hero">Enviar Mensagem</a>
                 </div>
             </div>
         </div>
