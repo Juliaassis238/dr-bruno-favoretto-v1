@@ -154,7 +154,7 @@
             height: 100vh;
             min-height: 750px;
             position: relative;
-            background: url('assets/img/avatar-doctoralia.jpg') center bottom / cover no-repeat;
+            background: url('assets/img/avatar-doctoralia.webp') center bottom / cover no-repeat;
             overflow: hidden;
         }
 
@@ -169,8 +169,8 @@
                 rgba(10,10,10,0.85) 18%,
                 rgba(10,10,10,0.65) 35%,
                 rgba(10,10,10,0.35) 50%,
-                rgba(255,255,255,0.20) 65%,
-                rgba(255,255,255,0.20) 85%
+                rgba(255,255,255,0.08) 65%,
+                rgba(255,255,255,0.02) 85%
             );
             z-index: 1;
         }
@@ -536,7 +536,10 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="assets/img/galeria-01.jpg" alt="Dr. Bruno Favoretto" loading="lazy">
+                    <picture>
+                        <source srcset="assets/img/galeria-01.webp" type="image/webp">
+                        <img src="assets/img/galeria-01.jpg" alt="Dr. Bruno Favoretto" loading="lazy">
+                    </picture>
                 </div>
                 <div class="about-text">
                     <span class="subtitle">Conheça o Profissional</span>
@@ -586,10 +589,10 @@
                 <h2>Nosso Consultório</h2>
             </div>
             <div class="gallery">
-                <div class="gallery-item"><img src="assets/img/galeria-04.jpg" alt="Consultório" loading="lazy"></div>
-                <div class="gallery-item"><img src="assets/img/galeria-05.jpg" alt="Sala de Exame" loading="lazy"></div>
-                <div class="gallery-item"><img src="assets/img/galeria-06.jpg" alt="Sala de Espera" loading="lazy"></div>
-                <div class="gallery-item"><img src="assets/img/galeria-03.jpg" alt="Fachada" loading="lazy"></div>
+                <div class="gallery-item"><picture><source srcset="assets/img/galeria-04.webp" type="image/webp"><img src="assets/img/galeria-04.jpg" alt="Consultório" loading="lazy"></picture></div>
+                <div class="gallery-item"><picture><source srcset="assets/img/galeria-05.webp" type="image/webp"><img src="assets/img/galeria-05.jpg" alt="Sala de Exame" loading="lazy"></picture></div>
+                <div class="gallery-item"><picture><source srcset="assets/img/galeria-06.webp" type="image/webp"><img src="assets/img/galeria-06.jpg" alt="Sala de Espera" loading="lazy"></picture></div>
+                <div class="gallery-item"><picture><source srcset="assets/img/galeria-03.webp" type="image/webp"><img src="assets/img/galeria-03.jpg" alt="Fachada" loading="lazy"></picture></div>
             </div>
         </div>
     </section>
