@@ -84,9 +84,36 @@
             align-items: center;
         }
 
-        .logo img {
-            height: 60px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 44px;
             width: auto;
+        }
+
+        .logo-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--dark);
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-name span {
+            display: block;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gold);
+            margin-top: 2px;
         }
 
         nav ul {
@@ -142,8 +169,8 @@
                 rgba(10,10,10,0.85) 18%,
                 rgba(10,10,10,0.65) 35%,
                 rgba(10,10,10,0.35) 50%,
-                rgba(255,255,255,0.08) 65%,
-                rgba(255,255,255,0.02) 85%
+                rgba(255,255,255,0.20) 65%,
+                rgba(255,255,255,0.20) 85%
             );
             z-index: 1;
         }
@@ -471,7 +498,13 @@
 
     <header>
         <div class="container nav-content">
-            <a href="#inicio" class="logo"><img src="assets/img/logo.png" alt="Dr. Bruno Favoretto - Pediatria & Nutrologia"></a>
+            <a href="#inicio" class="logo">
+                <img src="assets/img/icon.png" alt="Ícone Dr. Bruno Favoretto" class="logo-icon">
+                <div class="logo-name">
+                    Dr. Bruno Favoretto
+                    <span>Pediatria &amp; Nutrologia</span>
+                </div>
+            </a>
             <nav>
                 <ul>
                     <li><a href="#inicio">Início</a></li>
