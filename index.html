@@ -157,8 +157,12 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            padding-top: 16vh;
-            padding-bottom: 30vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 0 24px;
         }
 
         .hero-content .subtitle-top {
@@ -167,32 +171,8 @@
             letter-spacing: 6px;
             font-size: 0.95rem;
             color: var(--gold);
-            margin-bottom: 20px;
+            margin-bottom: 32px;
             font-weight: 600;
-            text-shadow: 0 2px 16px rgba(0,0,0,0.5);
-        }
-
-        .hero h1 {
-            font-size: clamp(2.8rem, 6vw, 4.5rem);
-            color: #FFFFFF;
-            margin-bottom: 16px;
-            font-style: italic;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 0 4px 25px rgba(0,0,0,0.5);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            font-weight: 400;
-            letter-spacing: 0.8px;
-            color: #FFFFFF;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
             text-shadow: 0 2px 16px rgba(0,0,0,0.5);
         }
 
@@ -516,9 +496,16 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <span class="subtitle-top">Cuidado e Dedicação</span>
-            <h1>Saúde Infantil com Excelência</h1>
-            <p>Atendimento médico humanizado, focado no desenvolvimento saudável e no bem-estar de crianças e adolescentes em Goiânia.</p>
             <a href="https://wa.me/5562982429688" class="btn-hero">Agendar Consulta</a>
+        </div>
+    </section>
+
+    <section id="intro" style="background: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-style: italic; margin-bottom: 24px;">Saúde Infantil com Excelência</h2>
+                <p style="font-size: 1.25rem; color: var(--dark-light); max-width: 700px; margin: 0 auto; line-height: 1.8;">Atendimento médico humanizado, focado no desenvolvimento saudável e no bem-estar de crianças e adolescentes em Goiânia.</p>
+            </div>
         </div>
     </section>
 
