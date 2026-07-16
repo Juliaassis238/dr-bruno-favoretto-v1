@@ -141,13 +141,14 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            /* Gradiente suave: escuro no topo para contraste do texto, desvanecendo para transparente onde está o rosto */
+            /* Gradiente suave: escuro no topo para contraste do texto, com leve toque branco/chique */
             background: linear-gradient(
                 to bottom,
-                rgba(0,0,0,0.7) 0%,
-                rgba(0,0,0,0.5) 25%,
-                rgba(0,0,0,0.15) 45%,
-                rgba(0,0,0,0.0) 70%
+                rgba(15,15,15,0.72) 0%,
+                rgba(15,15,15,0.52) 25%,
+                rgba(15,15,15,0.18) 45%,
+                rgba(255,255,255,0.03) 60%,
+                rgba(255,255,255,0.0) 80%
             );
             z-index: 1;
         }
@@ -182,15 +183,16 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin-bottom: 40px;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            color: rgba(255,255,255,0.9);
+            font-weight: 400;
+            letter-spacing: 0.8px;
+            color: rgba(255,255,255,0.95);
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.7;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
         }
 
         .btn-hero {
